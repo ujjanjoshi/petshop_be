@@ -1,0 +1,116 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Admin;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class ResetMigrationSeeder extends Seeder
+{
+    /**
+     * Seeder to set migration...
+     */
+    public function run(): void
+    {
+        DB::table('migrations')->truncate();
+
+        DB::table('migrations')->insert([
+            ['migration'=>'0001_01_01_000000_create_users_table','batch'=>1],
+            ['migration'=>'0001_01_01_000001_create_cache_table','batch'=>1],
+            ['migration'=>'0001_01_01_000002_create_jobs_table','batch'=>1],
+            ['migration'=>'2024_04_08_012810_add_two_factor_columns_to_users_table','batch'=>1],
+            ['migration'=>'2024_04_08_012818_create_personal_access_tokens_table','batch'=>1],
+            ['migration'=>'2024_04_08_090258_tickets_delivery_details','batch'=>1],
+            ['migration'=>'2024_04_08_090600_tickets_details','batch'=>1],
+            ['migration'=>'2024_04_08_091440_tickets_face_value_details','batch'=>1],
+            ['migration'=>'2024_04_08_092858_tickets_numbers_of_tickets_for_sales','batch'=>1],
+            ['migration'=>'2024_04_08_093127_tickets_proceed_price_details','batch'=>1],
+            ['migration'=>'2024_04_08_093240_ticket_restrictions_benefits_details','batch'=>1],
+            ['migration'=>'2024_04_08_093356_ticket_seat_details','batch'=>1],
+            ['migration'=>'2024_05_10_082533_create_admins_table','batch'=>1],
+            ['migration'=>'2024_05_10_130514_create_feature_hotels_table','batch'=>1],
+            ['migration'=>'2024_05_20_050043_create_menu_bars_table','batch'=>1],
+            ['migration'=>'2024_05_21_132851_create_not_allowed_hotels_table','batch'=>1],
+            ['migration'=>'2024_05_27_071039_create_feature_merchandises_table','batch'=>1],
+            ['migration'=>'2024_05_27_071144_create_not_allowed_merchandises_table','batch'=>1],
+            ['migration'=>'2024_05_27_082005_create_not_allowed_tickets_table','batch'=>1],
+            ['migration'=>'2024_05_27_082011_create_feature_tickets_table','batch'=>1],
+            ['migration'=>'2024_05_27_101251_create_shipping_addresses_table','batch'=>1],
+            ['migration'=>'2024_06_06_134916_create_feature_rentals_table','batch'=>1],
+            ['migration'=>'2024_06_06_134932_create_not_allowed_rentals_table','batch'=>1],
+            ['migration'=>'2024_06_21_061726_create_feature_tours_table','batch'=>1],
+            ['migration'=>'2024_06_21_062055_create_not_allowed_tours_table','batch'=>1],
+            ['migration'=>'2024_06_25_145942_create_personal_access_tokens_table','batch'=>1],
+            ['migration'=>'2024_06_26_054406_create_experiences_table','batch'=>1],
+            ['migration'=>'2024_06_26_055712_create_experience_cities_table','batch'=>1],
+            ['migration'=>'2024_06_26_055712_create_experience_states_table','batch'=>1],
+            ['migration'=>'2024_06_26_061749_create_experience_categories_table','batch'=>1],
+            ['migration'=>'2024_06_26_062430_create_experience_countries_table','batch'=>1],
+            ['migration'=>'2024_06_26_081606_create_experience_locations_table','batch'=>1],
+            ['migration'=>'2024_06_26_081756_create_experience_categories_experiences_table','batch'=>1],
+            ['migration'=>'2024_06_26_082038_create_experience_locations_experiences_table','batch'=>1],
+            ['migration'=>'2024_06_26_115605_create_ticket_categories_table','batch'=>1],
+            ['migration'=>'2024_06_26_115605_create_tickets_table','batch'=>1],
+            ['migration'=>'2024_06_26_120807_create_ticket_categories_childrens_table','batch'=>1],
+            ['migration'=>'2024_06_26_121220_create_ticket_performers_table','batch'=>1],
+            ['migration'=>'2024_06_26_122223_create_ticket_productions_table','batch'=>1],
+            ['migration'=>'2024_06_26_122242_create_ticket_productions_performers_table','batch'=>1],
+            ['migration'=>'2024_06_26_123832_create_ticket_venues_table','batch'=>1],
+            ['migration'=>'2024_06_26_132910_create_hotels_table','batch'=>1],
+            ['migration'=>'2024_06_26_133005_create_hotel_destinations_table','batch'=>1],
+            ['migration'=>'2024_06_26_134617_create_hotel_facilities_table','batch'=>1],
+            ['migration'=>'2024_06_27_052503_create_merchandises_table','batch'=>1],
+            ['migration'=>'2024_06_27_052547_create_merchandise_categories_table','batch'=>1],
+            ['migration'=>'2024_06_27_052629_create_merchandise_dimensions_table','batch'=>1],
+            ['migration'=>'2024_06_27_052720_create_merchandise_features_table','batch'=>1],
+            ['migration'=>'2024_06_27_052832_create_merchandise_resources_table','batch'=>1],
+            ['migration'=>'2024_06_27_052947_create_merchandise_options_table','batch'=>1],
+            ['migration'=>'2024_06_27_060200_create_tour_destinations','batch'=>1],
+            ['migration'=>'2024_06_27_062312_create_tour_attractions','batch'=>1],
+            ['migration'=>'2024_06_27_125303_create_image_rentals_table','batch'=>1],
+            ['migration'=>'2024_06_27_130345_create_tour_attractions_destinations','batch'=>1],
+            ['migration'=>'2024_06_27_130651_create_unit_rentals_table','batch'=>1],
+            ['migration'=>'2024_06_27_130944_create_vacation_rentals_table','batch'=>1],
+            ['migration'=>'2024_06_27_135036_create_rate_rentals','batch'=>1],
+            ['migration'=>'2024_06_27_135041_create_availability_rentals','batch'=>1],
+            ['migration'=>'2024_07_05_060004_create_currencies_table','batch'=>1],
+            ['migration'=>'2024_07_05_064135_create_countries_table','batch'=>1],
+            ['migration'=>'2024_07_05_064239_create_order_histories_table','batch'=>1],
+            ['migration'=>'2024_07_05_065352_create_brandings_table','batch'=>1],
+            ['migration'=>'2024_07_08_141620_create_redeemers_table','batch'=>1],
+            ['migration'=>'2024_07_08_151618_create_certificates_table','batch'=>1],
+            ['migration'=>'2024_07_09_045602_add_column_to_users_table','batch'=>1],
+            ['migration'=>'2024_07_09_114633_add_column_to_brandings_table','batch'=>1],
+            ['migration'=>'2024_07_12_053315_add_columns_to_users_table','batch'=>1],
+            ['migration'=>'2024_07_12_053628_drop_name_column_from_users_table','batch'=>1],
+            ['migration'=>'2024_07_16_060715_add_column_to_certificates_table','batch'=>1],
+            ['migration'=>'2024_07_16_075904_add_column_to_users_table','batch'=>1],
+            ['migration'=>'2024_07_16_130844_recreate_users_table','batch'=>1],
+            ['migration'=>'2024_07_23_050709_update_column_to_certificates_table','batch'=>1],
+            ['migration'=>'2024_07_24_073237_create_emails_table','batch'=>1],
+            ['migration'=>'2024_07_25_055835_add_column_to_users_table','batch'=>1],
+            ['migration'=>'2024_07_25_075507_create_order_histories_table','batch'=>1],
+            ['migration'=>'2024_07_25_134303_create_shipping_addresses_table','batch'=>1],
+            ['migration'=>'2024_08_01_085022_create_emails_table','batch'=>1],
+            ['migration'=>'2024_08_07_142450_add_index_to_tables','batch'=>1],
+            ['migration'=>'2024_08_09_062926_add_column_to_brandings_table','batch'=>1],
+            ['migration'=>'2024_08_12_065917_remove_column_to_brandings','batch'=>1],
+            ['migration'=>'2024_08_12_135635_update_column_to_shipping_addresses','batch'=>1],
+            ['migration'=>'2024_08_23_135528_add_column_to_users_table','batch'=>1],
+            ['migration'=>'2024_09_04_061959_create_payment_charges_table','batch'=>1],
+            ['migration'=>'2024_09_04_080255_create_payment_charges_table','batch'=>1],
+            ['migration'=>'2024_09_12_073718_create_ticket_special_requests_table','batch'=>1],
+            ['migration'=>'2024_09_16_014002_add_popularity_score_to_ticket_productions','batch'=>1],
+            ['migration'=>'2024_09_16_121322_add_configuration_id_to_ticket_productions','batch'=>1],
+            ['migration'=>'2024_09_20_151418_add_alt_xxx_id_to_ticket_xxx_table','batch'=>1],
+            ['migration'=>'2024_09_23_180743_add_certificate_code_to_order_histories_table','batch'=>1],
+            ['migration'=>'2024_09_25_032719_add_index_to_name','batch'=>1],
+            ['migration'=>'2024_09_25_155803_add_image_to_merchandise_categories','batch'=>1],
+            ['migration'=>'2024_09_26_042046_make_seating_optional_requests','batch'=>1],
+            ['migration'=>'2024_10_08_083926_add_column_to_order_histories_table','batch'=>1],
+            ['migration'=>'2024_11_05_create_viator_destinations_tags','batch'=>1],
+        ]);
+    }
+}
